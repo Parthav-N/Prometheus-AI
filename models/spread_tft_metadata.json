@@ -1,0 +1,78 @@
+{
+  "version": "v1",
+  "weather_features": [
+    "wind_speed_kmh",
+    "wind_direction",
+    "temperature_c",
+    "humidity",
+    "max_wind_kmh",
+    "wind_speed_trend",
+    "temp_trend",
+    "humidity_trend",
+    "drought_index"
+  ],
+  "static_features": [
+    "current_area_km2",
+    "fuel_multiplier",
+    "slope_proxy",
+    "frp_mean",
+    "frp_max",
+    "n_detections",
+    "fire_density",
+    "frp_trend",
+    "slope_wind_interaction",
+    "wind_x_fuel",
+    "heat_dryness"
+  ],
+  "all_features": [
+    "wind_speed_kmh",
+    "wind_direction",
+    "temperature_c",
+    "humidity",
+    "max_wind_kmh",
+    "wind_speed_trend",
+    "temp_trend",
+    "humidity_trend",
+    "drought_index",
+    "current_area_km2",
+    "fuel_multiplier",
+    "slope_proxy",
+    "frp_mean",
+    "frp_max",
+    "n_detections",
+    "fire_density",
+    "frp_trend",
+    "slope_wind_interaction",
+    "wind_x_fuel",
+    "heat_dryness"
+  ],
+  "n_features": 20,
+  "target_cols": [
+    "growth_rate_6h",
+    "growth_rate_12h",
+    "growth_rate_24h"
+  ],
+  "horizons_h": [
+    6,
+    12,
+    24
+  ],
+  "quantiles": [
+    0.1,
+    0.5,
+    0.9
+  ],
+  "growth_clip_km2h": 5.0,
+  "train_cutoff": "2024-01-01",
+  "train_samples": 561,
+  "val_samples": 399,
+  "best_val_loss": 0.015296331606805325,
+  "p10_p90_coverage": 0.7652464494569758,
+  "architecture": {
+    "d_model": 64,
+    "n_heads": 4,
+    "n_lstm_layers": 2,
+    "dropout": 0.15
+  },
+  "note": "Log-transform targets. Use np.expm1() to convert predictions back to km2/h."
+}

@@ -49,6 +49,25 @@ else:
 # HELPER FUNCTIONS - LIVE DATA
 # ============================================================================
 
+import pandas as pd
+import numpy as np
+
+def clean_for_json(obj):
+    """Recursively clean NaN/Inf values for JSON serialization"""
+    if isinstance(obj, dict):
+        return {k: clean_for_json(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [clean_for_json(item) for item in obj]
+    elif isinstance(obj, float):
+        if np.isnan(obj) or np.isinf(obj):
+            return None
+        return float(obj)
+    elif isinstance(obj, (np.integer, np.int64, np.int32)):
+        return int(obj)
+    elif pd.isna(obj):
+        return None
+    return obj
+
 def fetch_live_fires(bbox, days=1):
     """Fetch current fires from NASA FIRMS"""
     url = f"https://firms.modaps.eosdis.nasa.gov/api/area/csv/{FIRMS_API_KEY}/VIIRS_NOAA20_NRT/{bbox}/{days}"
@@ -263,7 +282,7 @@ def detect_intent(question):
     live_keywords = [
         'now', 'current', 'today', 'live', 'right now', 
         'active', 'currently', 'at the moment', 'present',
-        'ongoing', 'this moment'
+        'ongoing', 'this moment', 'are there', 'any fires', 'fire status', 'weather', 'risk', 'near me'
     ]
     
     q_lower = question.lower()
@@ -588,7 +607,7 @@ Provide a complete, helpful answer. Finish all sentences properly."""
             print(f"  ✓ Using fallback response")
         
         # Build final response
-        result = {
+        result = clean_for_json({
             'answer': llm_answer,
             'live_data_used': intent['needs_live'] and live_data is not None,
             'sources': [
@@ -600,7 +619,7 @@ Provide a complete, helpful answer. Finish all sentences properly."""
                 for doc in rag_results[:3]
             ],
             'timestamp': datetime.now().isoformat()
-        }
+        })
         
         if live_data:
             result['live_data'] = live_data

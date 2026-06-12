@@ -1,120 +1,44 @@
-# ===========================================
-# Environment Variables (CRITICAL - Sensitive)
-# ===========================================
-.env
-.env.local
-.env.*.local
-.env.production
-.env.development
+# ── Data (too large for GitHub) ──────────────────────────────────────────────
+data/
 
-# ===========================================
-# Virtual Environments
-# ===========================================
-venv/
-venv_bak/
-.venv/
-ENV/
-env/
-.virtualenv/
-
-# ===========================================
-# Python Cache & Compiled Files
-# ===========================================
+# ── Python ───────────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
+*.pyo
+*.pyd
 .Python
 *.egg-info/
-*.egg
 dist/
 build/
-eggs/
-parts/
-var/
-sdist/
-develop-eggs/
-.installed.cfg
-lib/
-lib64/
-.pytest_cache/
-.coverage
-htmlcov/
-.mypy_cache/
-.tox/
+*.egg
 
-# ===========================================
-# IDE & Editor Files
-# ===========================================
+# ── Virtual environments ──────────────────────────────────────────────────────
+venv/
+env/
+.env/
+.venv/
+
+# ── Environment variables ─────────────────────────────────────────────────────
+.env
+.env.local
+*.env
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
-.DS_Store
-Thumbs.db
-*.sublime-*
 
-# ===========================================
-# Jupyter Notebook
-# ===========================================
-.ipynb_checkpoints
-*.ipynb
-
-# ===========================================
-# Model Files (Large - Regeneratable)
-# ===========================================
-*.h5
-*.keras
-*.pkl
-*.pickle
-*.model
-models/*.h5
-models/*.keras
-models/*.pkl
-models/*.pickle
-
-# ===========================================
-# Data Files (Can be regenerated/downloaded)
-# ===========================================
-data/cache/
-data/*.csv
-data/*.json
-!data/calmac.csv
-!data/infrastructure/
-!data/fires/
-vector_db.pkl
-
-# ===========================================
-# Backend Specific
-# ===========================================
-flask_backend/vector_db.pkl
+# ── Logs / temp ───────────────────────────────────────────────────────────────
 *.log
-
-# ===========================================
-# Streamlit
-# ===========================================
-.streamlit/
-.streamlit/secrets.toml
-
-# ===========================================
-# Node Modules (if any)
-# ===========================================
-node_modules/
-package-lock.json
-
-# ===========================================
-# Temporary Files
-# ===========================================
-*.tmp
-*.temp
-*.bak
-*.backup
-*.swp
-*.swo
-*~
-
-data/calmac.csv
-data/fires/*.csv
-*.csv
-src/backend/data_cache/
+tmp/
+temp/

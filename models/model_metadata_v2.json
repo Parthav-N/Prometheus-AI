@@ -1,0 +1,38 @@
+{
+  "version": "v2_temporal",
+  "features": [
+    "min_distance_km",
+    "mean_distance_km",
+    "num_fires_30km",
+    "max_frp",
+    "wind_speed_kmh",
+    "wind_direction",
+    "temperature_c",
+    "humidity",
+    "wind_fire_alignment",
+    "drought_index",
+    "days_since_rain"
+  ],
+  "n_features": 11,
+  "architecture": "256-128-64-32 MC Dropout",
+  "dropout_rates": [
+    0.3,
+    0.3,
+    0.2,
+    0.1
+  ],
+  "mc_samples": 50,
+  "train_cutoff": "2024-01-01",
+  "train_samples": 14757,
+  "val_samples": 3150,
+  "val_period": "2024-01-01 to 2025-12-31",
+  "mae": 2.7874915599823,
+  "rmse": 4.285536289215088,
+  "bucket_accuracy": 0.9644444444444444,
+  "avg_uncertainty": 5.9569220542907715,
+  "mae_high_uncertainty": 3.309051990509033,
+  "mae_low_uncertainty": 2.6134912967681885,
+  "epochs_trained": 79,
+  "best_val_loss": 17.14295196533203,
+  "note": "Temporal split \u2014 no data leakage from future fire events"
+}
