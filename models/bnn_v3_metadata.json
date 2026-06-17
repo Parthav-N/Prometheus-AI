@@ -1,0 +1,73 @@
+{
+  "model": "BNN v3",
+  "label_source": "NASA FIRMS \u2014 real satellite fire detections",
+  "label_definition": "fire within 5km of asset within next 24h",
+  "no_synthetic_labels": true,
+  "architecture": {
+    "layers": [
+      256,
+      128,
+      64,
+      32,
+      1
+    ],
+    "dropout": 0.3,
+    "activation": "relu"
+  },
+  "mc_passes": 50,
+  "features": [
+    "min_dist_km",
+    "mean_dist_km",
+    "n_fires_30km",
+    "max_frp",
+    "wind_speed_kmh",
+    "wind_direction",
+    "temperature_c",
+    "humidity",
+    "wind_fire_alignment",
+    "drought_index",
+    "days_since_rain"
+  ],
+  "n_features": 11,
+  "optimal_threshold": 0.11090965569019318,
+  "class_pos_weight": 357.68,
+  "train_period": "2017-2021",
+  "val_period": "2022-2023",
+  "test_period": "2024",
+  "val_metrics": {
+    "auc": 0.7409,
+    "ap": 0.0135,
+    "precision": 0.0043,
+    "recall": 0.726,
+    "f1": 0.0085,
+    "tp": 795,
+    "fp": 185413,
+    "tn": 413492,
+    "fn": 300,
+    "threshold": 0.1109
+  },
+  "test_metrics": {
+    "auc": 0.7815,
+    "ap": 0.0534,
+    "precision": 0.0069,
+    "recall": 0.7508,
+    "f1": 0.0136,
+    "tp": 1124,
+    "fp": 162760,
+    "tn": 435743,
+    "fn": 373,
+    "threshold": 0.1109
+  },
+  "best_epoch": 6,
+  "best_val_auc": 0.7461,
+  "calibration": {
+    "method": "IsotonicRegression",
+    "fit_on": "val set only (2022-2023)",
+    "ranking_preserved": true,
+    "val_brier_before": 0.056423,
+    "val_brier_after": 0.001813,
+    "test_brier_before": 0.049331,
+    "test_brier_after": 0.002458,
+    "score_interpretation": "calibrated probability that fire reaches within 5km of this asset within next 24h"
+  }
+}

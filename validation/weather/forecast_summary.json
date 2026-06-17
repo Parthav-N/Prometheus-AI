@@ -1,0 +1,147 @@
+{
+  "source": "Open-Meteo free API",
+  "variables": [
+    "wind_speed_kmh",
+    "wind_direction",
+    "temperature_c",
+    "humidity",
+    "drought_index (approx)",
+    "days_since_rain (approx)"
+  ],
+  "horizons_h": [
+    0,
+    6,
+    12,
+    24
+  ],
+  "known_limitation": "drought_index and days_since_rain are approximated from precipitation forecast, not direct forecast variables. Sub-24h horizons interpolate linearly from T+0 to T+24h TFT prediction.",
+  "fallback": "current conditions used at all horizons if API unavailable",
+  "test_results": {
+    "Paradise CA (Camp Fire area)": {
+      "0": {
+        "wind_speed_kmh": 9.8,
+        "wind_direction": 144.0,
+        "temperature_c": 25.0,
+        "humidity": 50.0,
+        "drought_index": 1.0,
+        "days_since_rain": 14.0,
+        "source": "Open-Meteo forecast",
+        "is_forecast": false
+      },
+      "6": {
+        "wind_speed_kmh": 1.8,
+        "wind_direction": 37.0,
+        "temperature_c": 20.7,
+        "humidity": 55.0,
+        "drought_index": 1.0,
+        "days_since_rain": 13.75,
+        "source": "Open-Meteo forecast",
+        "is_forecast": true
+      },
+      "12": {
+        "wind_speed_kmh": 10.4,
+        "wind_direction": 284.0,
+        "temperature_c": 26.0,
+        "humidity": 46.0,
+        "drought_index": 1.0,
+        "days_since_rain": 13.5,
+        "source": "Open-Meteo forecast",
+        "is_forecast": true
+      },
+      "24": {
+        "wind_speed_kmh": 9.5,
+        "wind_direction": 143.0,
+        "temperature_c": 24.1,
+        "humidity": 46.0,
+        "drought_index": 1.0,
+        "days_since_rain": 13.0,
+        "source": "Open-Meteo forecast",
+        "is_forecast": true
+      }
+    },
+    "Redding CA (Carr Fire area)": {
+      "0": {
+        "wind_speed_kmh": 6.2,
+        "wind_direction": 187.0,
+        "temperature_c": 30.3,
+        "humidity": 37.0,
+        "drought_index": 1.0,
+        "days_since_rain": 14.0,
+        "source": "Open-Meteo forecast",
+        "is_forecast": false
+      },
+      "6": {
+        "wind_speed_kmh": 6.0,
+        "wind_direction": 245.0,
+        "temperature_c": 24.0,
+        "humidity": 50.0,
+        "drought_index": 1.0,
+        "days_since_rain": 13.75,
+        "source": "Open-Meteo forecast",
+        "is_forecast": true
+      },
+      "12": {
+        "wind_speed_kmh": 3.7,
+        "wind_direction": 209.0,
+        "temperature_c": 30.0,
+        "humidity": 32.0,
+        "drought_index": 1.0,
+        "days_since_rain": 13.5,
+        "source": "Open-Meteo forecast",
+        "is_forecast": true
+      },
+      "24": {
+        "wind_speed_kmh": 7.9,
+        "wind_direction": 204.0,
+        "temperature_c": 30.5,
+        "humidity": 40.0,
+        "drought_index": 1.0,
+        "days_since_rain": 13.0,
+        "source": "Open-Meteo forecast",
+        "is_forecast": true
+      }
+    },
+    "Boulder CO (Marshall Fire area)": {
+      "0": {
+        "wind_speed_kmh": 17.8,
+        "wind_direction": 111.0,
+        "temperature_c": 23.2,
+        "humidity": 16.0,
+        "drought_index": 1.0,
+        "days_since_rain": 14.0,
+        "source": "Open-Meteo forecast",
+        "is_forecast": false
+      },
+      "6": {
+        "wind_speed_kmh": 14.2,
+        "wind_direction": 164.0,
+        "temperature_c": 21.5,
+        "humidity": 15.0,
+        "drought_index": 1.0,
+        "days_since_rain": 13.75,
+        "source": "Open-Meteo forecast",
+        "is_forecast": true
+      },
+      "12": {
+        "wind_speed_kmh": 0.8,
+        "wind_direction": 27.0,
+        "temperature_c": 29.8,
+        "humidity": 12.0,
+        "drought_index": 1.0,
+        "days_since_rain": 13.5,
+        "source": "Open-Meteo forecast",
+        "is_forecast": true
+      },
+      "24": {
+        "wind_speed_kmh": 12.1,
+        "wind_direction": 53.0,
+        "temperature_c": 19.7,
+        "humidity": 26.0,
+        "drought_index": 1.0,
+        "days_since_rain": 13.0,
+        "source": "Open-Meteo forecast",
+        "is_forecast": true
+      }
+    }
+  }
+}

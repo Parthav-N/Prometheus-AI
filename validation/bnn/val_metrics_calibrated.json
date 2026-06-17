@@ -1,0 +1,24 @@
+{
+  "raw": {
+    "auc": 0.7419,
+    "ap": 0.0133,
+    "brier": 0.056454,
+    "brier_skill": -29.9901
+  },
+  "calibrated": {
+    "auc": 0.7419,
+    "ap": 0.0133,
+    "brier": 0.001813,
+    "brier_skill": 0.0048
+  },
+  "thresholds": {
+    "LOW_MEDIUM": 0.0008449,
+    "MEDIUM_HIGH": 0.00126381,
+    "HIGH_CRITICAL": 0.00740508,
+    "derived_from": "val set (2022-2023) calibrated score percentiles",
+    "method": "P50/P80/P95 of Platt-calibrated BNN scores on val set",
+    "best_C": 10.0,
+    "cv_brier": 0.00181295,
+    "note": "These are FIXED thresholds. Apply consistently to all scoring calls. Do NOT recompute per-batch \u2014 that makes tiers relative, not absolute."
+  }
+}

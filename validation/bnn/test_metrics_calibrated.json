@@ -1,0 +1,16 @@
+{
+  "raw": {
+    "auc": 0.7808,
+    "ap": 0.0527,
+    "brier": 0.049303,
+    "brier_skill": -18.8101
+  },
+  "calibrated": {
+    "auc": 0.7808,
+    "ap": 0.0527,
+    "brier": 0.002458,
+    "brier_skill": 0.0123
+  },
+  "thresholds": "loaded from val set \u2014 see val_metrics_calibrated.json",
+  "note": "test set never used during calibration or threshold derivation"
+}

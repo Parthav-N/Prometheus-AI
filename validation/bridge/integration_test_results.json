@@ -1,0 +1,118 @@
+{
+  "T+0h": [
+    {
+      "asset": "Gas Plant SW 30km",
+      "risk_prob": 0.027117,
+      "uncertainty": 0.004211,
+      "risk_tier": "CRITICAL",
+      "expected": "MEDIUM",
+      "pass": true
+    },
+    {
+      "asset": "Feather River Hospital",
+      "risk_prob": 0.027056,
+      "uncertainty": 0.009925,
+      "risk_tier": "CRITICAL",
+      "expected": "CRITICAL",
+      "pass": true
+    },
+    {
+      "asset": "SW Substation 25km",
+      "risk_prob": 0.027046,
+      "uncertainty": 0.006685,
+      "risk_tier": "CRITICAL",
+      "expected": "MEDIUM",
+      "pass": true
+    },
+    {
+      "asset": "SW Substation 10km",
+      "risk_prob": 0.026342,
+      "uncertainty": 0.047296,
+      "risk_tier": "CRITICAL",
+      "expected": "HIGH",
+      "pass": true
+    },
+    {
+      "asset": "NE Substation 15km upwind",
+      "risk_prob": 0.024204,
+      "uncertainty": 0.121846,
+      "risk_tier": "CRITICAL",
+      "expected": "LOW",
+      "pass": true
+    },
+    {
+      "asset": "NE Substation 30km upwind",
+      "risk_prob": 0.001094,
+      "uncertainty": 0.144789,
+      "risk_tier": "MEDIUM",
+      "expected": "LOW",
+      "pass": false
+    },
+    {
+      "asset": "SW Substation 45km",
+      "risk_prob": 0.000743,
+      "uncertainty": 0.047751,
+      "risk_tier": "LOW",
+      "expected": "LOW",
+      "pass": true
+    }
+  ],
+  "T+24h": [
+    {
+      "asset": "SW Substation 10km",
+      "risk_prob": 0.026071,
+      "uncertainty": 0.081563,
+      "risk_tier": "CRITICAL",
+      "expected": "HIGH",
+      "pass": true
+    },
+    {
+      "asset": "Gas Plant SW 30km",
+      "risk_prob": 0.026015,
+      "uncertainty": 0.080809,
+      "risk_tier": "CRITICAL",
+      "expected": "MEDIUM",
+      "pass": true
+    },
+    {
+      "asset": "Feather River Hospital",
+      "risk_prob": 0.024425,
+      "uncertainty": 0.144316,
+      "risk_tier": "CRITICAL",
+      "expected": "CRITICAL",
+      "pass": true
+    },
+    {
+      "asset": "SW Substation 25km",
+      "risk_prob": 0.02307,
+      "uncertainty": 0.192867,
+      "risk_tier": "CRITICAL",
+      "expected": "MEDIUM",
+      "pass": true
+    },
+    {
+      "asset": "NE Substation 15km upwind",
+      "risk_prob": 0.022452,
+      "uncertainty": 0.17295,
+      "risk_tier": "CRITICAL",
+      "expected": "LOW",
+      "pass": true
+    },
+    {
+      "asset": "NE Substation 30km upwind",
+      "risk_prob": 0.001173,
+      "uncertainty": 0.130512,
+      "risk_tier": "MEDIUM",
+      "expected": "LOW",
+      "pass": false
+    },
+    {
+      "asset": "SW Substation 45km",
+      "risk_prob": 0.000741,
+      "uncertainty": 0.055499,
+      "risk_tier": "LOW",
+      "expected": "LOW",
+      "pass": true
+    }
+  ]
+}

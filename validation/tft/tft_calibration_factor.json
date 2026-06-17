@@ -1,0 +1,16 @@
+{
+  "overall": 0.6066,
+  "per_direction": {
+    "N": 0.8335,
+    "NE": 0.6677,
+    "E": 0.6203,
+    "SE": 0.694,
+    "S": 0.5342,
+    "SW": 0.5158,
+    "W": 0.5928,
+    "NW": 0.3249
+  },
+  "derived_from": "val set median(actual/predicted_P50)",
+  "val_samples": 171,
+  "interpretation": "Multiply P50 prediction by this factor before displaying on dashboard. Derived from 2022-2023 validation fires, not manually chosen."
+}

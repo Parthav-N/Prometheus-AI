@@ -1,0 +1,68 @@
+{
+  "model": "TFT v2 (multi-output quantile regressor)",
+  "label_approach": "radial_profile",
+  "n_directions": 8,
+  "directions_deg": [
+    0,
+    45,
+    90,
+    135,
+    180,
+    225,
+    270,
+    315
+  ],
+  "n_quantiles": 3,
+  "quantiles": [
+    0.1,
+    0.5,
+    0.9
+  ],
+  "architecture": {
+    "shared_encoder": [
+      64,
+      32,
+      16
+    ],
+    "heads": 8,
+    "outputs_per_head": 3,
+    "total_outputs": 24,
+    "dropout": 0.3
+  },
+  "loss": "pinball (quantile) loss",
+  "label_source": "FIRMS VIIRS daily fire clusters \u2014 convex hull radial profile",
+  "no_synthetic_labels": true,
+  "train_period": "2017-2021",
+  "val_period": "2022-2023",
+  "test_period": "2024",
+  "best_epoch": 71,
+  "calibration_factor": 0.6065572798252106,
+  "val_metrics": {
+    "mae_overall": 2.4912,
+    "mae_per_dir": {
+      "N": 2.4408,
+      "NE": 2.6705,
+      "E": 2.6509,
+      "SE": 2.6656,
+      "S": 2.5372,
+      "SW": 2.5129,
+      "W": 2.3533,
+      "NW": 2.0986
+    },
+    "p10_p90_coverage": 0.7895
+  },
+  "test_metrics": {
+    "mae_overall": 2.7723,
+    "mae_per_dir": {
+      "N": 2.9571,
+      "NE": 2.7564,
+      "E": 2.6223,
+      "SE": 2.9671,
+      "S": 2.7962,
+      "SW": 2.6499,
+      "W": 2.5173,
+      "NW": 2.9121
+    },
+    "p10_p90_coverage": 0.7967
+  }
+}
